@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG Agent 智能问答</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 RAG Agent 智能问答系统</h1>
+            <p class="subtitle">基于检索增强生成的智能对话助手</p>
+        </header>
+
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages"></div>
+
+            <div class="input-container">
+                <textarea
+                    id="questionInput"
+                    placeholder="请输入您的问题..."
+                    rows="3"
+                ></textarea>
+                <button id="sendBtn" onclick="sendMessage()">
+                    <span id="btnText">发送</span>
+                    <span id="btnLoader" class="loader" style="display: none;"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
